@@ -4,11 +4,30 @@ import './App.css';
 import Counter from './Counter';
 
 const App = () => {
+  const array  = [
+  {
+    appName: "Counter 1",
+    initialValue: 100
+  },
+  {
+    appName: "Counter 2",
+    initialValue: 100
+  },
+  {
+    appName: "Counter 3",
+    initialValue: 100
+  },
+  {
+    appName: "Counter 4",
+    initialValue: 100
+  }
+  ];
+
   return(
   <>
-    <Counter appName="Counter 1"/>
-    <Counter appName="Counter 2"/>
-    <Counter appName="Counter 3"/>
+  { array.map((counter) => <Counter appName={counter.appName}
+    initialValue={counter.initialValue}/>)
+  }
   </>
   )
 };
