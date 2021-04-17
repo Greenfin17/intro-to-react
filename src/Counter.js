@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
 const Counter = () => { 
-  const[counter, State] = useState(0);
-  const[counter, State] = useState(0);
+  const [counter, setCounter] = useState(0);
+  const [userInput, setUserInput] = useState(0);
+  const [counterName, setCounterName] = useState("Counter 1");
+  
   return (
     <>
     <h2>{counter}</h2>
-    Hello World
+    <h2>{userInput}</h2>
+    <h2>{counterName}</h2>
     </>
   )
 }
