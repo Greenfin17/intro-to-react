@@ -1,35 +1,38 @@
 import React, { useState } from 'react';
 
-const Counter = () => { 
+const Counter = ({appName,initialValue}) => { 
   const [counter, setCounter] = useState(0);
-  const [userInput, setUserInput] = useState(1);
-  const [counterName, setCounterName] = useState("Counter 1");
+  const [userInput, setUserInput] = useState(initialValue);
+  const [counterName, setCounterName] = useState(appName);
   
   return (
-    <div>
-      <input 
-        onChange={(e) => setCounterName(e.target.value)}>
+    <div class="container">
+      <br />
+      <label class="input-counter-name">Counter Name</label>
+      <input class="input-counter-name"
+       onChange={(e) => setCounterName(e.target.value)}>
       </input>
-      <h1>{counterName}</h1>
-      <h2>{counter}</h2>
+      <h1 class="title">{counterName}</h1>
+      <h2 class="counter">{counter}</h2>
 
-      <input
-        onChange={(e) => setCounterName(e.target.value)}>
-      </input>
-
-      <input 
-        onChange={(e) => setUserInput(Number(e.target.id))}>
+      <label className="user-increment">Increment / Decrement value</label>
+      <input className="user-increment"
+        onChange={(e) => setUserInput(Number(e.target.value))}>
       </input><br />
-
-      <button 
-        onClick={() => setCounter((prevState) => prevState + userInput)}>
-          Increment by {userInput}
-      </button>
-      {counter <= 0 ? '' : 
-        <button onClick={() => setCounter((prevState) => prevState - 1)}
-          >Decrement by {userInput}
-        </button>}
-      <button onClick={() => setCounter(0)}>Reset</button>
+      
+      <div className="increment-cluster">
+        <button className="counter-button"
+          onClick={() => setCounter((prevState) => prevState + userInput)}>
+            Increment by {userInput}
+        </button>
+        {counter <= 0 ? '' : 
+          <button className="counter-button" 
+            onClick={() => setCounter((prevState) => prevState - userInput)}
+            >Decrement by {userInput}
+          </button>}
+        </div>
+      <button className="counter-button"
+        onClick={() => setCounter(0)}>Reset</button>
     </div>
   )
 }

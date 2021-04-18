@@ -1,25 +1,25 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import './styles/index.css';
 import Counter from './Counter';
 
 const App = () => {
   const array  = [
   {
     appName: "Counter 1",
-    initialValue: 100
+    initialValue: 1
   },
   {
     appName: "Counter 2",
-    initialValue: 100
+    initialValue: 2
   },
   {
     appName: "Counter 3",
-    initialValue: 100
+    initialValue: 3
   },
   {
     appName: "Counter 4",
-    initialValue: 100
+    initialValue: 4 
   }
   ];
 

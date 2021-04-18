@@ -1,3 +1,5 @@
+@import './App.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1.title, h2.counter,
+.user-counter-name {
+  text-align: center;
+}
+
+div.increment-cluster,
+.input-counter-name,
+.user-increment,
+button.counter-button {
+  text-align: center;
+  display: block;
+  margin: 10px auto;
 }
