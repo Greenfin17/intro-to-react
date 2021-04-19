@@ -25,7 +25,7 @@ const App = () => {
 
   return(
   <>
-  { array.map((counter) => <Counter appName={counter.appName}
+  { array.map((counter, i) => <Counter key={i} appName={counter.appName}
     initialValue={counter.initialValue}/>)
   }
   </>

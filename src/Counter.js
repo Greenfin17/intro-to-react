@@ -6,14 +6,14 @@ const Counter = ({appName,initialValue}) => {
   const [counterName, setCounterName] = useState(appName);
   
   return (
-    <div class="container">
+    <div className ="container">
       <br />
-      <label class="input-counter-name">Counter Name</label>
-      <input class="input-counter-name"
+      <label className ="input-counter-name">Counter Name</label>
+      <input className ="input-counter-name"
        onChange={(e) => setCounterName(e.target.value)}>
       </input>
-      <h1 class="title">{counterName}</h1>
-      <h2 class="counter">{counter}</h2>
+      <h1 className ="title">{counterName}</h1>
+      <h2 className ="counter">{counter}</h2>
 
       <label className="user-increment">Increment / Decrement value</label>
       <input className="user-increment"
